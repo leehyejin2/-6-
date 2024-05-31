@@ -1,1 +1,18 @@
+package SRP;
+
+public class Main {
+    public static void main(String[] args) {
+        User user1 = new User("Alice", 30);
+        User user2 = new User("Bob", 25);
+
+        UserRepository userRepository = new UserRepository();
+        userRepository.addUser(user1);
+        userRepository.addUser(user2);
+
+        for (User user : userRepository.getAllUsers()) {
+            System.out.println(user);
+        }
+    }
+}
+
 
